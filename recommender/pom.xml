@@ -17,7 +17,8 @@
         <module>common</module>
         <module>common</module>
         <module>OfflineRecommender</module>
-        <module>OneLineRecommender</module>
+        <module>OnLineRecommender</module>
+        <module>KafkaStreaming</module>
     </modules>
 
     <dependencyManagement>

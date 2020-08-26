@@ -5,7 +5,6 @@ import com.mongodb.casbah.{MongoClient, MongoClientURI}
 import redis.clients.jedis.Jedis
 import com.tanjunchen.recommender.common.util
 import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.streaming.kafka010.{ConsumerStrategies, KafkaUtils, LocationStrategies}
