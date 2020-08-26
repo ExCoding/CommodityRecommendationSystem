@@ -17,6 +17,7 @@
         <module>common</module>
         <module>common</module>
         <module>OfflineRecommender</module>
+        <module>OneLineRecommender</module>
     </modules>
 
     <dependencyManagement>

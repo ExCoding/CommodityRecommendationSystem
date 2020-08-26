@@ -32,4 +32,18 @@ object DataUtil {
   val PRODUCT_RECS = "ProductRecs"
   val USER_MAX_RECOMMENDATION = 20
 
+  // 实时推荐服务
+
+  val STREAM_RECS = "StreamRecs"
+  val STREAM_PRODUCT_RECS = "StreamProductRecs"
+  val MAX_USER_RATING_NUM = 20
+  val MAX_SIM_PRODUCTS_NUM = 20
+
+  // kafka topic
+  val KAFKA_TOPIC = "recommender"
+  val KAFKA_BOOTSTRAP_SERVER = "192.168.17.140:9092"
+  val KAFKA_GROUP_ID = "recommender"
+
+  // redis url
+  val REDIS_URL = "192.168.17.140"
 }

@@ -22,5 +22,30 @@ docker exec -it mongo /bin/bash
 96
 ```
 
+Redis
+
+docker run  -d --name redis -p 6379:6379 redis:4.0.2
+
+docker exec -it redis /bin/bash
+
+Zookeeper
+
+docker run --privileged=true -d --name zookeeper --publish 2181:2181  -d  zookeeper:3.4.10
+
+Kafka
+
+docker run -d --name kafka --publish 9092:9092 --link zookeeper --env KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181  \
+--env KAFKA_ADVERTISED_HOST_NAME=192.168.17.140 --env KAFKA_ADVERTISED_PORT=9092 --volume /etc/localtime:/etc/localtime wurstmeister/kafka:2.11-2.0.1
+
+docker pull wurstmeister/kafka:2.11-2.1.0
+
+docker exec -it kafka sh
+
+cd /opt/kafka_2.11-2.0.1 && ./bin/kafka-console-producer.sh --broker-list 192.168.17.140:9092 --topic recommender 
+
+输入：4867|457976|5.0|434345
+
+./bin/kafka-topics.sh --list --zookeeper 192.168.17.140:2181
+
 
 
