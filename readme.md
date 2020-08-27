@@ -1,5 +1,24 @@
 # 电商推荐系统
 
+## 前提条件
+
+电商推荐系统：
+
+1. 离线推荐
+1. 在线推荐
+
+```
+common  公共仓库
+ContentRecommender  基于物品内容的推荐算法(物品的基本特性信息)
+DataLoader  数据加载模块
+ItemCFRecommender  基于用户行为数据的协同过滤算法
+KafkaStreaming  Kafka 实现数据流预处理
+OfflineRecommender  实时推荐算法
+OnLineRecommender  基于隐语义模型的推荐(ALS) 用户相似度 商品相似度
+StatisticsRecommender  基于统计的推荐(如热门商品)
+```
+
+
 ## 搭建环境
 
 mongo
@@ -47,5 +66,10 @@ cd /opt/kafka_2.11-2.0.1 && ./bin/kafka-console-producer.sh --broker-list 192.16
 
 ./bin/kafka-topics.sh --list --zookeeper 192.168.17.140:2181
 
+Flume
 
+./bin/flume-ng agent -c ./conf/ -f ./conf/log-kafka.properties -n a1 -Dflume.root.logger=INFO,console
 
+## 参考
+
+[电影推荐系统](https://github.com/tanjunchen/MovieRecommendSystem)、[商品推荐系统](https://www.bilibili.com/video/BV1TE411G7zy?p=1)

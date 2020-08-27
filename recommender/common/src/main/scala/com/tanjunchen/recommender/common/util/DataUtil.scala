@@ -46,4 +46,11 @@ object DataUtil {
 
   // redis url
   val REDIS_URL = "192.168.17.140"
+
+  // Content Recommender
+  val CONTENT_PRODUCT_RECS = "ContentBasedProductRecs"
+
+  // ItemCF Recommender
+  val ITEM_CF_PRODUCT_RECS = "ItemCFProductRecs"
+  val MAX_RECOMMENDATION = 10
 }
